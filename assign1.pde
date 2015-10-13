@@ -1,5 +1,5 @@
 PImage bg1, bg2, enemy, fighter, hp, treasure;
-int x,x1,x2,enemyX,tx,ty,y,t;
+int x,x1,x2,enemyX,tx,ty,y,t,hpRad;
 void setup () {
   size(640,480) ;  // must use this size.
   bg1 = loadImage("img/bg1.png");
@@ -11,7 +11,7 @@ void setup () {
   x2=-640;
   tx=floor(random(640));
   ty=floor(random(480));
-  
+  hpRad=floor(random(180));
 }
 
 void draw() {
@@ -37,7 +37,7 @@ void draw() {
   image(treasure,tx,ty);
   //hp
   fill(255,0,0);
-  rect(30,30,150,20);
+  rect(29,29,hpRad,20);
   image(hp,25,25);
 }
 
